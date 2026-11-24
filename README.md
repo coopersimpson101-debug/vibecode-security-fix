@@ -21,3 +21,7 @@ Then ask Claude Code to "secure my app" or "run a security audit", or run `/vibe
 ## Safety
 
 The skill only probes systems you own and approve, never writes to production, and asks before risky changes such as migrations, auth changes or payment logic.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
