@@ -84,15 +84,28 @@ It also runs `gitleaks`, `semgrep` and your package manager's audit, and checks 
 ## How it works
 
 ```mermaid
-flowchart LR
-    A[Intake<br/>5 questions] --> B[Recon<br/>stack, endpoints,<br/>threat model]
-    B --> C[Scan<br/>gitleaks, semgrep,<br/>audit, CVEs]
-    C --> D[Review<br/>15 categories]
-    D --> E[Triage<br/>one batched<br/>approval]
-    E --> F[Fix<br/>safe-rollout recipes<br/>+ regression tests]
-    F --> G[Verify<br/>rescan, probe,<br/>diff review]
-    G --> H[Deliver<br/>audit + deploy plan]
+flowchart TB
+    subgraph audit [" 1 · Audit "]
+        direction LR
+        A[Intake] --> B[Recon] --> C[Scan] --> D[Review]
+    end
+    subgraph fix [" 2 · Fix "]
+        direction LR
+        E[Triage] --> F[Fix] --> G[Verify] --> H[Deliver]
+    end
+    audit --> fix
 ```
+
+| Step | What happens |
+|---|---|
+| **Intake** | Five questions: is it live, is there staging, which services, anything off-limits, may it run read-only checks |
+| **Recon** | Maps the stack, endpoints and data, and writes a threat model |
+| **Scan** | Runs gitleaks, semgrep and the dependency audit, and checks framework versions against current CVEs |
+| **Review** | Works through the 15 categories above and keeps only real findings, each with evidence |
+| **Triage** | Ranks findings by severity and asks for one batched approval of the risky fixes |
+| **Fix** | Applies safe-rollout recipes and adds regression tests, one category at a time |
+| **Verify** | Rescans, probes the fixed endpoints and reviews the whole diff |
+| **Deliver** | Writes the audit, the deploy plan and the list of what you must do |
 
 ## Built for apps that are already live
 
