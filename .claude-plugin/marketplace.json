@@ -1,0 +1,14 @@
+{
+  "name": "vibecode-security",
+  "description": "Security hardening for vibecoded apps.",
+  "owner": { "name": "coopersimpson101-debug", "url": "https://github.com/coopersimpson101-debug" },
+  "plugins": [
+    {
+      "name": "vibecode-security-fix",
+      "source": "./",
+      "description": "Audit and fix security holes in a finished, possibly live vibecoded app without breaking users.",
+      "category": "security",
+      "tags": ["security", "audit", "supabase", "nextjs"]
+    }
+  ]
+}

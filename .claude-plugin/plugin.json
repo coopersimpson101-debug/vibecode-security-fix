@@ -1,1 +1,11 @@
-{"name": "vibecode-security-fix", "description": "Security-harden a finished, possibly live vibecoded app: audit code, config and deployment, fix holes without breaking users, and leave a deploy plan. Use on 'secure my app' or 'security audit'."}
+{
+  "name": "vibecode-security-fix",
+  "displayName": "Vibecode Security Fix",
+  "version": "1.0.0",
+  "description": "Security-harden a finished, possibly live vibecoded app: audit code, config and deployment, fix holes without breaking users, and leave a deploy plan. Use on 'secure my app' or 'security audit'.",
+  "author": { "name": "coopersimpson101-debug", "url": "https://github.com/coopersimpson101-debug" },
+  "homepage": "https://github.com/coopersimpson101-debug/vibecode-security-fix",
+  "repository": "https://github.com/coopersimpson101-debug/vibecode-security-fix",
+  "license": "MIT",
+  "keywords": ["security", "audit", "vibecoding", "supabase", "firebase", "nextjs", "rls", "owasp", "appsec"]
+}

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security issue in the skill itself
+    url: https://github.com/coopersimpson101-debug/vibecode-security-fix/security/advisories/new
+    about: Please report privately, not in a public issue.

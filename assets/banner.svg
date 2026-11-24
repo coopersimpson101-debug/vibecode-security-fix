@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-labelledby="t d">
+  <title id="t">vibecode-security-fix</title>
+  <desc id="d">A Claude Code skill that security-hardens finished, live vibecoded apps without breaking users.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#111a2e"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="400" rx="20" fill="url(#bg)"/>
+  <rect width="1280" height="400" rx="20" fill="url(#grid)"/>
+  <circle cx="1060" cy="200" r="230" fill="url(#glow)"/>
+
+  <!-- shield -->
+  <g transform="translate(980 92)">
+    <path d="M80 0 L160 30 V100 C160 160 125 196 80 216 C35 196 0 160 0 100 V30 Z" fill="url(#shield)"/>
+    <path d="M80 14 L146 39 V100 C146 151 117 182 80 200 Z" fill="#ffffff" fill-opacity="0.10"/>
+    <path d="M46 108 L70 132 L118 80" fill="none" stroke="#06281d" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- code fragments -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#64748b">
+    <text x="880" y="352">- .eq('id', id)</text>
+    <text x="880" y="374" fill="#34d399">+ .eq('id', id).eq('user_id', user.id)</text>
+  </g>
+
+  <!-- text -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="72" y="104" font-size="20" font-weight="600" fill="#34d399" letter-spacing="2">CLAUDE CODE SKILL</text>
+    <text x="72" y="172" font-size="60" font-weight="800" fill="#f8fafc">vibecode-security-fix</text>
+    <text x="72" y="222" font-size="26" fill="#cbd5e1">Find and fix the security holes in your vibecoded app,</text>
+    <text x="72" y="256" font-size="26" fill="#cbd5e1">without breaking it for the users you already have.</text>
+  </g>
+
+  <!-- chips -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600">
+    <rect x="72" y="296" width="148" height="36" rx="18" fill="#1e293b" stroke="#334155"/>
+    <text x="146" y="320" text-anchor="middle" fill="#e2e8f0">Supabase RLS</text>
+    <rect x="232" y="296" width="96" height="36" rx="18" fill="#1e293b" stroke="#334155"/>
+    <text x="280" y="320" text-anchor="middle" fill="#e2e8f0">IDOR</text>
+    <rect x="340" y="296" width="148" height="36" rx="18" fill="#1e293b" stroke="#334155"/>
+    <text x="414" y="320" text-anchor="middle" fill="#e2e8f0">Leaked keys</text>
+    <rect x="500" y="296" width="132" height="36" rx="18" fill="#1e293b" stroke="#334155"/>
+    <text x="566" y="320" text-anchor="middle" fill="#e2e8f0">AI spend</text>
+    <rect x="644" y="296" width="140" height="36" rx="18" fill="#1e293b" stroke="#334155"/>
+    <text x="714" y="320" text-anchor="middle" fill="#e2e8f0">+ 11 more</text>
+  </g>
+</svg>

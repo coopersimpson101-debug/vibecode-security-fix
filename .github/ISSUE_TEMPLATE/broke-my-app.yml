@@ -1,0 +1,20 @@
+name: A fix broke my app
+description: Following the skill caused a regression or locked users out
+labels: [safe-rollout]
+body:
+  - type: input
+    id: stack
+    attributes:
+      label: Stack
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What changed and what broke
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: What a safer rollout would have looked like
