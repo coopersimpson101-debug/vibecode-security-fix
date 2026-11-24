@@ -1,0 +1,1 @@
+{"name": "vibecode-security-fix", "description": "Security-harden a finished, possibly live vibecoded app: audit code, config and deployment, fix holes without breaking users, and leave a deploy plan. Use on 'secure my app' or 'security audit'."}
